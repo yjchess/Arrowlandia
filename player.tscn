@@ -1,8 +1,10 @@
-[gd_scene load_steps=36 format=3 uid="uid://cx37fpomwpmuc"]
+[gd_scene load_steps=38 format=3 uid="uid://cx37fpomwpmuc"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_eqpac"]
 [ext_resource type="Texture2D" uid="uid://dvbrq8lfwe16j" path="res://assets/Ranger- Base.png" id="1_j5id2"]
 [ext_resource type="PackedScene" uid="uid://b0tik05pp2lso" path="res://arrow.tscn" id="2_ni41k"]
+[ext_resource type="Texture2D" uid="uid://dfgk634rna2ce" path="res://assets/Tiles/Assets/Background_2.png" id="4_5eg8s"]
+[ext_resource type="Texture2D" uid="uid://j4yornh8vh5s" path="res://assets/Tiles/Assets/Background_1.png" id="5_hjbxu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d7vkr"]
 radius = 8.0
@@ -240,7 +242,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_eqpac")
 arrow = ExtResource("2_ni41k")
 
@@ -254,13 +256,30 @@ shape = SubResource("CapsuleShape2D_d7vkr")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(3, -10)
 sprite_frames = SubResource("SpriteFrames_6onxc")
-animation = &"shoot"
+animation = &"idle"
 autoplay = "idle"
-frame = 5
-frame_progress = 0.496373
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 limit_left = 0
 limit_top = 0
 limit_bottom = 320
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+scale = Vector2(1.2, 1.2)
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(496, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("4_5eg8s")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+scale = Vector2(1.2, 1.2)
+motion_mirroring = Vector2(496, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+texture = ExtResource("5_hjbxu")
+centered = false

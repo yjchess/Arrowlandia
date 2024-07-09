@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var arrow:PackedScene
-const SPEED = 200.0
+const SPEED = 3200.0
 const JUMP_VELOCITY = -400.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -27,9 +27,9 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("left", "right")
 	if direction:
-		velocity.x = direction * SPEED
+		velocity.x = direction * SPEED * delta
 		if not Input.is_action_just_pressed("jump") or Input.is_action_just_pressed("shoot"): $AnimatedSprite2D.play("run")
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, SPEED * delta)
 		if not Input.is_action_just_pressed("jump") or Input.is_action_just_pressed("shoot"): $AnimatedSprite2D.play("idle")
 	move_and_slide()

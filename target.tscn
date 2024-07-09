@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c04gxc0nbw6r3"]
+
+[ext_resource type="Texture2D" uid="uid://c6nxsoo0nv8np" path="res://assets/misc/target.png" id="1_ba8lg"]
+[ext_resource type="Script" path="res://target.gd" id="1_jqp2e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pe8hr"]
+radius = 18.0
+
+[node name="target" type="StaticBody2D"]
+self_modulate = Color(0.827451, 0.827451, 0.827451, 1)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_jqp2e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+modulate = Color(0.729412, 0.729412, 0.729412, 1)
+shape = SubResource("CircleShape2D_pe8hr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ba8lg")

@@ -22,7 +22,6 @@ func _physics_process(delta):
 	else:
 		velocity.x = 0
 		velocity.y = 0
-		print("I'm on the floor!")
 	
 	var collision = move_and_collide(velocity * delta)
 	if collision:
