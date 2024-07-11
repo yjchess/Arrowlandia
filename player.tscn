@@ -213,31 +213,31 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 0.25,
 "texture": SubResource("AtlasTexture_7m1gi")
 }, {
-"duration": 1.0,
+"duration": 0.25,
 "texture": SubResource("AtlasTexture_ged8q")
 }, {
-"duration": 1.0,
+"duration": 0.25,
 "texture": SubResource("AtlasTexture_5s0al")
 }, {
-"duration": 1.0,
+"duration": 0.25,
 "texture": SubResource("AtlasTexture_ralmn")
 }, {
-"duration": 1.0,
+"duration": 0.25,
 "texture": SubResource("AtlasTexture_xp4p5")
 }, {
-"duration": 1.0,
+"duration": 0.25,
 "texture": SubResource("AtlasTexture_480wp")
 }, {
-"duration": 1.0,
+"duration": 0.25,
 "texture": SubResource("AtlasTexture_4c6hd")
 }, {
-"duration": 1.0,
+"duration": 0.25,
 "texture": SubResource("AtlasTexture_apbha")
 }],
-"loop": true,
+"loop": false,
 "name": &"shoot",
 "speed": 5.0
 }]
@@ -246,9 +246,6 @@ animations = [{
 script = ExtResource("1_eqpac")
 arrow = ExtResource("2_ni41k")
 
-[node name="ArrowPoint" type="Marker2D" parent="."]
-position = Vector2(11, -2)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_d7vkr")
@@ -256,7 +253,7 @@ shape = SubResource("CapsuleShape2D_d7vkr")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(3, -10)
 sprite_frames = SubResource("SpriteFrames_6onxc")
-animation = &"idle"
+animation = &"shoot"
 autoplay = "idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -283,3 +280,8 @@ motion_mirroring = Vector2(496, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
 texture = ExtResource("5_hjbxu")
 centered = false
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="ArrowPoint" type="Marker2D" parent="Node2D"]
+position = Vector2(17, -2)

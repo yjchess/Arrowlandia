@@ -7,22 +7,23 @@ const initial_arc = -100
 var on_floor = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var gravity = 3
 
 func _ready():
-	velocity.y = initial_arc
+	#velocity.y = initial_arc
+	pass
 
 func _physics_process(delta):
 	# Add the gravity.
 	if not on_floor:
-		velocity.y += gravity/2 * delta
-		velocity.x = SPEED
+		velocity.y += gravity
+		#velocity.x = SPEED
 		if rotation_degrees <75:
-			rotation_degrees += 1
+			rotation_degrees += 0.5
 	else:
 		velocity.x = 0
 		velocity.y = 0
-	
+
 	var collision = move_and_collide(velocity * delta)
 	if collision:
 		if collision.get_collider().is_in_group("floor"):
