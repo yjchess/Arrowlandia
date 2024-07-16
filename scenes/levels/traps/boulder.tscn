@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmlja1d5tdurw"]
+
+[ext_resource type="Script" path="res://scripts/boulder.gd" id="1_b8ohf"]
+[ext_resource type="Texture2D" uid="uid://dimcke033041b" path="res://assets/misc/grey_small.png" id="1_vc64k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e1nen"]
+radius = 74.9667
+
+[node name="Boulder" type="CharacterBody2D" groups=["trap"]]
+scale = Vector2(0.5, 0.5)
+collision_layer = 32
+collision_mask = 63
+script = ExtResource("1_b8ohf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vc64k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_e1nen")

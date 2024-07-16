@@ -1,0 +1,359 @@
+[gd_scene load_steps=39 format=3 uid="uid://c4bw61hqbri1i"]
+
+[ext_resource type="Texture2D" uid="uid://dvbrq8lfwe16j" path="res://assets/arrows/Ranger- Base.png" id="1_8n02y"]
+[ext_resource type="Script" path="res://scenes/cutscenes/introduction.gd" id="1_c3sln"]
+[ext_resource type="Texture2D" uid="uid://cds15l0s8d4ms" path="res://assets/misc/Idle_Wizard.png" id="2_plvj3"]
+[ext_resource type="Texture2D" uid="uid://bqfwbvjogyfh2" path="res://assets/misc/Idle_King.png" id="3_8tr84"]
+[ext_resource type="Texture2D" uid="uid://c2xo10h0bfrx7" path="res://assets/misc/Death_Princess.png" id="3_odrnc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dtgvs"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wbiau"]
+bg_color = Color(0.643137, 0.317647, 0.0156863, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.411765, 0.196078, 0.00392157, 1)
+border_blend = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exvfe"]
+atlas = ExtResource("1_8n02y")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukjm0"]
+atlas = ExtResource("1_8n02y")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gfw8n"]
+atlas = ExtResource("1_8n02y")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52pm7"]
+atlas = ExtResource("1_8n02y")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qr2kw"]
+atlas = ExtResource("1_8n02y")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4aevf"]
+atlas = ExtResource("1_8n02y")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0je5k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exvfe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukjm0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gfw8n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52pm7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qr2kw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4aevf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ax43"]
+atlas = ExtResource("2_plvj3")
+region = Rect2(0, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ieqjb"]
+atlas = ExtResource("2_plvj3")
+region = Rect2(250, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l082w"]
+atlas = ExtResource("2_plvj3")
+region = Rect2(500, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_le7gb"]
+atlas = ExtResource("2_plvj3")
+region = Rect2(750, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yn0qc"]
+atlas = ExtResource("2_plvj3")
+region = Rect2(1000, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmr1x"]
+atlas = ExtResource("2_plvj3")
+region = Rect2(1250, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fski"]
+atlas = ExtResource("2_plvj3")
+region = Rect2(1500, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_av6mh"]
+atlas = ExtResource("2_plvj3")
+region = Rect2(1750, 0, 250, 250)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qamj2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ax43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ieqjb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l082w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_le7gb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yn0qc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmr1x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fski")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_av6mh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bjt8"]
+atlas = ExtResource("3_odrnc")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vf6lu"]
+atlas = ExtResource("3_odrnc")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_si8v6"]
+atlas = ExtResource("3_odrnc")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yamka"]
+atlas = ExtResource("3_odrnc")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jo0ky"]
+atlas = ExtResource("3_odrnc")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nsp2d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3bjt8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vf6lu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_si8v6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yamka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jo0ky")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06mto"]
+atlas = ExtResource("3_8tr84")
+region = Rect2(0, 0, 160, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b72dv"]
+atlas = ExtResource("3_8tr84")
+region = Rect2(160, 0, 160, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwgpj"]
+atlas = ExtResource("3_8tr84")
+region = Rect2(320, 0, 160, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksf77"]
+atlas = ExtResource("3_8tr84")
+region = Rect2(480, 0, 160, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6n0r"]
+atlas = ExtResource("3_8tr84")
+region = Rect2(640, 0, 160, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xnou"]
+atlas = ExtResource("3_8tr84")
+region = Rect2(800, 0, 160, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8c8t"]
+atlas = ExtResource("3_8tr84")
+region = Rect2(960, 0, 160, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wmu4s"]
+atlas = ExtResource("3_8tr84")
+region = Rect2(1120, 0, 160, 111)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bj7nq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06mto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b72dv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwgpj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksf77")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6n0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4xnou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8c8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wmu4s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Introduction" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c3sln")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dtgvs")
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -393.0
+offset_right = 392.0
+offset_bottom = 640.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wbiau")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -376.0
+offset_top = 15.0
+offset_right = 376.0
+offset_bottom = 183.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+text = " A long, long, long time ago... there lived a nameless archer who dreamed of entering the King's Archery Tournament to prove that he was the best archer of all the land.      But..."
+fit_content = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panel/Panel/RichTextLabel"]
+position = Vector2(614.5, 76)
+sprite_frames = SubResource("SpriteFrames_0je5k")
+autoplay = "default"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Panel/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -375.5
+offset_top = 153.0
+offset_right = 376.5
+offset_bottom = 337.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(0.290196, 0, 0.407843, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "
+[center][b][i][font_size=25]\"Muahahaha! I’ve captured your daughter King Belze!!!\"[/font_size][/i][/b][/center]"
+fit_content = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panel/Panel/RichTextLabel2"]
+position = Vector2(374, 123)
+scale = Vector2(-1.25, 1.25)
+sprite_frames = SubResource("SpriteFrames_qamj2")
+autoplay = "default"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Panel/Panel/RichTextLabel2"]
+position = Vector2(497, 148)
+scale = Vector2(-1.75, 1.75)
+sprite_frames = SubResource("SpriteFrames_nsp2d")
+autoplay = "default"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Panel/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -376.0
+offset_top = 333.0
+offset_right = 376.0
+offset_bottom = 501.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(0.545248, 3.36915e-07, 0.301174, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "
+[center][b][i][font_size=25]\"Foul Fiend! You'll pay for what you've done!\"[/font_size][/i][/b][/center]"
+fit_content = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panel/Panel/RichTextLabel3"]
+position = Vector2(369.5, 80)
+scale = Vector2(1.25, 1.25)
+sprite_frames = SubResource("SpriteFrames_bj7nq")
+autoplay = "default"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="Panel/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -375.5
+offset_top = 484.0
+offset_right = 376.5
+offset_bottom = 630.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+text = "It seems like the tournament would have to wait until after the princess was rescued. It could take years waiting for the right adventurer. Unless..."
+fit_content = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panel/Panel/RichTextLabel4"]
+position = Vector2(374.5, 91)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_0je5k")
+autoplay = "default"

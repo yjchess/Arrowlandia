@@ -46,6 +46,15 @@ jump={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Ground Layer"
+2d_physics/layer_2="Middle Layer"
+2d_physics/layer_3="Sky Layer"
+2d_physics/layer_4="Player Layer"
+2d_physics/layer_5="Enemy Layer"
+2d_physics/layer_6="Trap Layer"
+
 [rendering]
 
 renderer/rendering_method="mobile"

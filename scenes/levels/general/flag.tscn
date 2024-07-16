@@ -1,0 +1,96 @@
+[gd_scene load_steps=13 format=3 uid="uid://tbivpmr6ks67"]
+
+[ext_resource type="Texture2D" uid="uid://crwmf2hidit0c" path="res://assets/misc/flags.png" id="1_oiu20"]
+[ext_resource type="Script" path="res://scripts/flag.gd" id="2_23wje"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lagff"]
+atlas = ExtResource("1_oiu20")
+region = Rect2(0, 0, 61, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cma7"]
+atlas = ExtResource("1_oiu20")
+region = Rect2(61, 0, 61, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqb3b"]
+atlas = ExtResource("1_oiu20")
+region = Rect2(122, 0, 61, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l07fi"]
+atlas = ExtResource("1_oiu20")
+region = Rect2(183, 0, 61, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uau2l"]
+atlas = ExtResource("1_oiu20")
+region = Rect2(0, 85, 61, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85200"]
+atlas = ExtResource("1_oiu20")
+region = Rect2(61, 85, 61, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00fur"]
+atlas = ExtResource("1_oiu20")
+region = Rect2(122, 85, 61, 85)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sq7kf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lagff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cma7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqb3b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l07fi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uau2l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85200")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00fur")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3blc"]
+size = Vector2(103, 272)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ei563"]
+bg_color = Color(0.345098, 0.996078, 0, 0.792157)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+
+[node name="Flag" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_sq7kf")
+autoplay = "default"
+frame_progress = 0.424325
+script = ExtResource("2_23wje")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-23.5, -95)
+shape = SubResource("RectangleShape2D_r3blc")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -75.0
+offset_top = 41.0
+offset_right = 29.0
+offset_bottom = 51.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ei563")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
