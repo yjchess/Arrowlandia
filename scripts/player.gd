@@ -40,7 +40,6 @@ func _physics_process(delta):
 			if $AnimatedSprite2D.animation != "jump" and $AnimatedSprite2D.animation != "shoot": $AnimatedSprite2D.play("idle")
 		else:$AnimatedSprite2D.play("idle")
 			
-		
 		#if not Input.is_action_just_pressed("jump") or Input.is_action_just_pressed("shoot"): $AnimatedSprite2D.play("idle")
 	move_and_slide()
 	
@@ -48,3 +47,10 @@ func _physics_process(delta):
 		var collision = get_slide_collision(i)
 		if collision.get_collider().is_in_group("enemy"):
 			print(collision.get_collider().name)
+
+func _process(delta):
+	if Input.is_action_pressed("left"):
+		scale.x = -1
+		print(scale.x)
+	if Input.is_action_pressed("right"):
+		scale.x = 1
