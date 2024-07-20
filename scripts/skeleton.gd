@@ -18,29 +18,33 @@ signal PlayerHit
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y = gravity * delta
-	
-	if direction =="right" and final_location.x > global_position.x:
-		scale.x = 1
-		if moving == true:
-			velocity.x = SPEED*delta
-			
-	elif direction == "right" and final_location.x < global_position.x:
-		global_position.x = final_location.x
-		scale.x = -1
-		direction = "left"
-		final_location = $Final_Location.global_position
-	
-	if direction =="left" and final_location.x < global_position.x:
-		if moving == true:
-			velocity.x = -SPEED*delta
-	elif direction == "left" and final_location.x > global_position.x:
-		global_position.x = final_location.x
-		direction = "right"
-		final_location = $Final_Location.global_position
 		
+	if !invulnerable:
+		if direction =="right" and final_location.x > global_position.x:
+			scale.x = 1
+			if moving == true:
+				velocity.x = SPEED*delta
+				
+		elif direction == "right" and final_location.x < global_position.x:
+			global_position.x = final_location.x
+			scale.x = -1
+			direction = "left"
+			final_location = $Final_Location.global_position
+		
+		if direction =="left" and final_location.x < global_position.x:
+			if moving == true:
+				velocity.x = -SPEED*delta
+		elif direction == "left" and final_location.x > global_position.x:
+			global_position.x = final_location.x
+			direction = "right"
+			final_location = $Final_Location.global_position
+	else:
+		velocity = Vector2.ZERO
 	if moving == false:
 		velocity = Vector2.ZERO
-
+	
+	if invulnerable == false:
+		$AnimatedSprite2D.play("walk")
 	move_and_slide()
 	
 	
