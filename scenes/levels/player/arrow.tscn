@@ -7,6 +7,8 @@
 size = Vector2(17, 5)
 
 [node name="Arrow" type="CharacterBody2D" groups=["arrow"]]
+collision_layer = 8
+collision_mask = 63
 script = ExtResource("1_om3cv")
 
 [node name="CharacterBody2D" type="Sprite2D" parent="."]

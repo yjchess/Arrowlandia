@@ -266,7 +266,6 @@ grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_wbiau")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/Panel"]
-visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -282,14 +281,9 @@ text = " A long, long, long time ago... there lived a nameless archer who dreame
 fit_content = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panel/Panel/RichTextLabel"]
-visible = false
 position = Vector2(614.5, 76)
 sprite_frames = SubResource("SpriteFrames_0je5k")
 autoplay = "default"
-
-[node name="Visible Timer" type="Timer" parent="Panel/Panel/RichTextLabel/AnimatedSprite2D"]
-wait_time = 10.7
-one_shot = true
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Panel/Panel"]
 layout_mode = 1
@@ -309,19 +303,18 @@ text = "
 fit_content = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panel/Panel/RichTextLabel2"]
-visible = false
 position = Vector2(374, 123)
 scale = Vector2(-1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_qamj2")
+autoplay = "default"
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Panel/Panel/RichTextLabel2"]
-visible = false
 position = Vector2(497, 148)
 scale = Vector2(-1.75, 1.75)
 sprite_frames = SubResource("SpriteFrames_nsp2d")
+autoplay = "default"
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="Panel/Panel"]
-visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -339,13 +332,12 @@ text = "
 fit_content = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panel/Panel/RichTextLabel3"]
-visible = false
 position = Vector2(369.5, 80)
 scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_bj7nq")
+autoplay = "default"
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="Panel/Panel"]
-visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -361,30 +353,7 @@ text = "It seems like the tournament would have to wait until after the princess
 fit_content = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panel/Panel/RichTextLabel4"]
-visible = false
 position = Vector2(374.5, 91)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_0je5k")
-
-[node name="RichTextLabel5" type="RichTextLabel" parent="Panel/Panel"]
-visible = false
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -382.0
-offset_top = -97.0
-offset_right = -12.0
-offset_bottom = -8.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_colors/default_color = Color(0, 0.317647, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-bbcode_enabled = true
-text = "
-[center][b][i][font_size=25] *sigh* \"Fine, Guess I'll do it myself!\"[/font_size][/i][/b][/center]"
-fit_content = true
-
-[connection signal="timeout" from="Panel/Panel/RichTextLabel/AnimatedSprite2D/Visible Timer" to="." method="_on_visible_timer_timeout"]
+autoplay = "default"

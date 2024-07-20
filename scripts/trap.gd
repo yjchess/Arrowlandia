@@ -6,6 +6,7 @@ var move := false
 var before_movement_position : Vector2
 var destination_y : float
 var initial_position : Vector2
+var direction #1 if up -1 if down
 
 # Assuming gravity is defined elsewhere or fetched from project settings
 var gravity : float = 9.8 # Example value, adjust according to your needs
@@ -13,6 +14,8 @@ var gravity : float = 9.8 # Example value, adjust according to your needs
 func _ready():
 	initial_position = global_position
 	before_movement_position = initial_position
+	if up : direction = 1
+	else: direction = -1
 
 func _physics_process(delta):
 	global_position.x = initial_position.x
@@ -27,7 +30,8 @@ func _physics_process(delta):
 		$Area2D/CollisionShape2D.disabled = true
 		set_collision_layer_value(1,false)
 		set_collision_mask_value(1, false)
-		if destination_y < before_movement_position.y:
+		fall = false
+		if destination_y < before_movement_position.y and direction == -1:
 			velocity.y = -gravity
 		else:
 			velocity.y = gravity
@@ -37,6 +41,7 @@ func _physics_process(delta):
 	if !move:
 		set_collision_layer_value(1,true)
 		set_collision_mask_value(1, true)
+		
 		
 	if destination_y < before_movement_position.y and destination_y >= global_position.y:
 		#print("Move False 1")
@@ -59,6 +64,8 @@ func _on_area_2d_body_entered(body):
 func _on_target_arrow_collision():
 	print("Arrow Collision")
 	move = !move # Toggle move state
-	destination_y = initial_position.y - (96 if up else 0) # Adjust destination_y based on up flag
+	if direction == 1: destination_y = initial_position.y - (96 if up else 0) # Adjust destination_y based on up flag
+	if direction == -1: destination_y = initial_position.y + (0 if up else 96) # Adjust destination_y based on up flag
+	
 	print(destination_y)
 	before_movement_position = global_position
