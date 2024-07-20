@@ -88,7 +88,7 @@ func _on_area_2d_body_entered(body):
 		$Attack_Animation.play("attack")
 		$AnimatedSprite2D.hide()
 		velocity = Vector2.ZERO
-		await get_tree().create_timer(1.5).timeout
+		await get_tree().create_timer(1.45).timeout
 		attacking = false
 		moving = true
 		velocity = old_velocity

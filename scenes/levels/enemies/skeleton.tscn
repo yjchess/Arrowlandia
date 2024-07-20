@@ -438,25 +438,25 @@ region = Rect2(731, 0, 43, 37)
 [sub_resource type="SpriteFrames" id="SpriteFrames_aegqb"]
 animations = [{
 "frames": [{
-"duration": 0.5,
+"duration": 0.25,
 "texture": SubResource("AtlasTexture_s0j5h")
 }, {
-"duration": 0.5,
+"duration": 0.25,
 "texture": SubResource("AtlasTexture_pf4lr")
 }, {
-"duration": 0.5,
+"duration": 0.25,
 "texture": SubResource("AtlasTexture_3hagy")
 }, {
-"duration": 0.5,
+"duration": 0.25,
 "texture": SubResource("AtlasTexture_g2e3w")
 }, {
-"duration": 0.5,
+"duration": 0.25,
 "texture": SubResource("AtlasTexture_haqy1")
 }, {
-"duration": 0.5,
+"duration": 0.25,
 "texture": SubResource("AtlasTexture_ju4il")
 }, {
-"duration": 0.5,
+"duration": 0.25,
 "texture": SubResource("AtlasTexture_l4tqn")
 }, {
 "duration": 0.5,
@@ -524,6 +524,8 @@ one_shot = true
 visible = false
 sprite_frames = SubResource("SpriteFrames_aegqb")
 animation = &"attack"
+frame = 17
+frame_progress = 1.0
 offset = Vector2(10, -6)
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -535,7 +537,7 @@ position = Vector2(12, -5.25)
 shape = SubResource("RectangleShape2D_ytb30")
 
 [node name="DetectPlayerTimer" type="Timer" parent="."]
-wait_time = 0.7
+wait_time = 0.35
 one_shot = true
 
 [connection signal="timeout" from="InvulnerableTimer" to="." method="_on_invulnerable_timer_timeout"]
