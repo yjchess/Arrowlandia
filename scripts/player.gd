@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 @export var arrow:PackedScene
+@export var grapple_arrow:PackedScene
+var grapple_unlocked = false
 const SPEED = 70.0
 const JUMP_VELOCITY = -400.0
 
@@ -25,6 +27,16 @@ func _physics_process(delta):
 		arrow_scene.position = $Node2D/ArrowPoint.global_position
 		get_tree().root.add_child(arrow_scene)
 		arrow_scene.velocity = (get_global_mouse_position() - arrow_scene.global_position)*2
+		if arrow_scene.velocity.x < 0: arrow_scene.scale.x = -1
+	
+	if Input.is_action_just_pressed("shoot_secondary") and grapple_unlocked:
+		$AnimatedSprite2D.play("shoot")
+		var arrow_scene = grapple_arrow.instantiate()
+		$Node2D.look_at(get_global_mouse_position())
+		arrow_scene.position = $Node2D/ArrowPoint.global_position
+		get_tree().root.add_child(arrow_scene)
+		arrow_scene.velocity = (get_global_mouse_position() - arrow_scene.global_position)*2
+		if arrow_scene.velocity.x < 0: arrow_scene.scale.x = -1
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("left", "right")
@@ -50,7 +62,8 @@ func _physics_process(delta):
 
 func _process(delta):
 	if Input.is_action_pressed("left"):
-		scale.x = -1
-		print(scale.x)
+		$AnimatedSprite2D.flip_h = true
+		$AnimatedSprite2D.position.x = -7
 	if Input.is_action_pressed("right"):
-		scale.x = 1
+		$AnimatedSprite2D.flip_h = false
+		$AnimatedSprite2D.position.x = 0

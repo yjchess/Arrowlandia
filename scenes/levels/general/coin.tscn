@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0fn5byy817ty"]
+
+[ext_resource type="Texture2D" uid="uid://ddt645vgnltfe" path="res://assets/Coins/Coins/Coins/Original Diminsions/Small/Gold 10 Piece.png" id="1_l13ct"]
+[ext_resource type="Script" path="res://scripts/coin.gd" id="2_pcjwo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lapty"]
+radius = 8.06226
+
+[node name="Coin" type="Sprite2D"]
+self_modulate = Color(0.827451, 0.827451, 0.827451, 1)
+position = Vector2(14, 10)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_l13ct")
+script = ExtResource("2_pcjwo")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource("CircleShape2D_lapty")

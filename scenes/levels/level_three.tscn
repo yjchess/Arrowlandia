@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cnex2qmodssxv"]
 
-[ext_resource type="Script" path="res://scenes/levels/level_one.gd" id="1_pfjca"]
+[ext_resource type="Script" path="res://scripts/level_one.gd" id="1_votkh"]
 [ext_resource type="PackedScene" uid="uid://bwlv0bhy5jt4u" path="res://scenes/levels/general/Ground TileMap.tscn" id="2_f35tl"]
 [ext_resource type="PackedScene" uid="uid://cx37fpomwpmuc" path="res://scenes/levels/player/player.tscn" id="9_if8rm"]
 [ext_resource type="PackedScene" uid="uid://tbivpmr6ks67" path="res://scenes/levels/general/flag.tscn" id="10_qt3pk"]
@@ -12,7 +12,7 @@ size = Vector2(10, 336.5)
 size = Vector2(2515.5, 15)
 
 [node name="level_one" type="Node"]
-script = ExtResource("1_pfjca")
+script = ExtResource("1_votkh")
 
 [node name="Ground" type="Node2D" parent="."]
 

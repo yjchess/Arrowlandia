@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://bny83mrdiafse"]
+
+[ext_resource type="Texture2D" uid="uid://ey3hoc53alhq" path="res://assets/misc/grapple_powerup.png" id="1_hctx0"]
+[ext_resource type="Script" path="res://scenes/levels/general/grapple_powerup.gd" id="2_qdwxy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbjcr"]
+size = Vector2(28, 36)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cjl6l"]
+bg_color = Color(0, 0.498039, 0.227451, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="grapple_powerup" type="Sprite2D" groups=["grapple_powerup"]]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_hctx0")
+script = ExtResource("2_qdwxy")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 64
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_tbjcr")
+
+[node name="Panel" type="Panel" parent="."]
+show_behind_parent = true
+offset_left = -13.0
+offset_top = -18.0
+offset_right = 15.0
+offset_bottom = 18.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cjl6l")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
