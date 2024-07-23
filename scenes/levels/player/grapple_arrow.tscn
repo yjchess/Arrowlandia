@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://daynjyxtrwjos"]
+
+[ext_resource type="Script" path="res://scripts/arrow.gd" id="1_3c2ol"]
+[ext_resource type="Texture2D" uid="uid://dif4fwgay58bc" path="res://assets/arrows/grappling_arrow.png" id="2_wwdrn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_urknq"]
+size = Vector2(21, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cerxy"]
+size = Vector2(7, 14)
+
+[node name="Grapple_Arrow" type="CharacterBody2D" groups=["arrow"]]
+collision_layer = 8
+collision_mask = 63
+script = ExtResource("1_3c2ol")
+
+[node name="CharacterBody2D" type="Sprite2D" parent="."]
+position = Vector2(10, -0.5)
+texture = ExtResource("2_wwdrn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(10.5, 0.0500002)
+shape = SubResource("RectangleShape2D_urknq")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(17.5, 0)
+scale = Vector2(0.994072, 1)
+shape = SubResource("RectangleShape2D_cerxy")
+
+[node name="Despawn_Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="Cooldown_Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Despawn_Timer" to="." method="_on_despawn_timer_timeout" flags=18]

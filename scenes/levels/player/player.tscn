@@ -1,8 +1,9 @@
-[gd_scene load_steps=38 format=3 uid="uid://cx37fpomwpmuc"]
+[gd_scene load_steps=39 format=3 uid="uid://cx37fpomwpmuc"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_61nyk"]
 [ext_resource type="PackedScene" uid="uid://b0tik05pp2lso" path="res://scenes/levels/player/arrow.tscn" id="2_xx11b"]
 [ext_resource type="Texture2D" uid="uid://dvbrq8lfwe16j" path="res://assets/arrows/Ranger- Base.png" id="3_c0owy"]
+[ext_resource type="PackedScene" uid="uid://daynjyxtrwjos" path="res://scenes/levels/player/grapple_arrow.tscn" id="3_jvdp6"]
 [ext_resource type="Texture2D" uid="uid://dfgk634rna2ce" path="res://assets/Tiles/Assets/Background_2.png" id="4_5b6e7"]
 [ext_resource type="Texture2D" uid="uid://j4yornh8vh5s" path="res://assets/Tiles/Assets/Background_1.png" id="5_3vhjx"]
 
@@ -247,16 +248,16 @@ collision_layer = 8
 collision_mask = 63
 script = ExtResource("1_61nyk")
 arrow = ExtResource("2_xx11b")
+grapple_arrow = ExtResource("3_jvdp6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_d7vkr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(3, -10)
 sprite_frames = SubResource("SpriteFrames_6onxc")
 animation = &"shoot"
 autoplay = "idle"
+offset = Vector2(3, -9)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
@@ -286,4 +287,4 @@ centered = false
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="ArrowPoint" type="Marker2D" parent="Node2D"]
-position = Vector2(17, -2)
+position = Vector2(22, -2)

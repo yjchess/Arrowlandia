@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://scripts/arrow.gd" id="1_om3cv"]
 [ext_resource type="Texture2D" uid="uid://cy3kgjfdto4x7" path="res://assets/arrows/Basic Arrow.png" id="2_pusmo"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_urknq"]
-size = Vector2(17, 5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6jivx"]
+size = Vector2(19.5, 5)
 
 [node name="Arrow" type="CharacterBody2D" groups=["arrow"]]
 collision_layer = 8
@@ -16,8 +16,8 @@ position = Vector2(10, -0.5)
 texture = ExtResource("2_pusmo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(10.5, 0.0500002)
-shape = SubResource("RectangleShape2D_urknq")
+position = Vector2(9.75, 0.0500002)
+shape = SubResource("RectangleShape2D_6jivx")
 
 [node name="Despawn_Timer" type="Timer" parent="."]
 wait_time = 5.0
