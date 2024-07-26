@@ -502,6 +502,7 @@ size = Vector2(38, 35.5)
 
 [node name="Skeleton" type="CharacterBody2D" groups=["enemy"]]
 position = Vector2(10, 13)
+collision_mask = 7
 script = ExtResource("1_dwhc3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

@@ -3,6 +3,7 @@ extends TileMap
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print(self.name, tile_set.get_physics_layer_collision_layer(0))
 	tile_set.set_physics_layer_collision_layer(0,collisionLayer)
 	pass # Replace with function body.
 
