@@ -245,7 +245,7 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 8
-collision_mask = 63
+collision_mask = 1087
 script = ExtResource("1_61nyk")
 arrow = ExtResource("2_xx11b")
 grapple_arrow = ExtResource("3_jvdp6")

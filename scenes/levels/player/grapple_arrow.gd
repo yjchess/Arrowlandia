@@ -6,8 +6,9 @@ const JUMP_VELOCITY = -400.0
 const initial_arc = -100
 var on_floor = false
 
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = 3
+var gravity = 1
 
 func _ready():
 	#velocity.y = initial_arc
@@ -32,11 +33,8 @@ func _physics_process(delta):
 	if collision:
 		if collision.get_collider().is_in_group("floor"):
 			on_floor = true
-		if collision.get_collider().is_in_group("enemy"):
-			collision.get_collider()._on_arrow_collision()
-			queue_free()
-		elif collision.get_collider().has_method("_on_arrow_collision"):
-			collision.get_collider()._on_arrow_collision()
+		if collision.get_collider().has_method("_on_grapple_arrow_collision"):
+			collision.get_collider()._on_grapple_arrow_collision(global_position)
 			queue_free()
 
 func _on_despawn_timer_timeout():

@@ -28,8 +28,9 @@ func _physics_process(delta):
 	
 	if move:
 		$Area2D/CollisionShape2D.disabled = true
-		set_collision_layer_value(1,false)
 		set_collision_mask_value(1, false)
+		set_collision_mask_value(2, false)
+		set_collision_mask_value(3, false)
 		fall = false
 		if destination_y < before_movement_position.y and direction == -1:
 			velocity.y = -gravity
@@ -39,8 +40,9 @@ func _physics_process(delta):
 		velocity.y = 0
 			
 	if !move:
-		set_collision_layer_value(1,true)
 		set_collision_mask_value(1, true)
+		set_collision_mask_value(2, true)
+		set_collision_mask_value(3, true)
 		
 		
 	if destination_y < before_movement_position.y and destination_y >= global_position.y:
