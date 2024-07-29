@@ -32,9 +32,9 @@ func _physics_process(delta):
 	if collision:
 		if collision.get_collider().is_in_group("floor"):
 			on_floor = true
-		if collision.get_collider().is_in_group("enemy"):
-			collision.get_collider()._on_arrow_collision()
-			queue_free()
+		#if collision.get_collider().is_in_group("enemy"):
+		#	collision.get_collider()._on_arrow_collision()
+		#	queue_free()
 		elif collision.get_collider().has_method("_on_arrow_collision"):
 			collision.get_collider()._on_arrow_collision()
 			queue_free()

@@ -1,6 +1,5 @@
-[gd_scene load_steps=22 format=3 uid="uid://cnex2qmodssxv"]
+[gd_scene load_steps=21 format=3 uid="uid://cnex2qmodssxv"]
 
-[ext_resource type="Script" path="res://scripts/level_one.gd" id="1_votkh"]
 [ext_resource type="PackedScene" uid="uid://bwlv0bhy5jt4u" path="res://scenes/levels/general/Ground TileMap.tscn" id="2_f35tl"]
 [ext_resource type="PackedScene" uid="uid://bny83mrdiafse" path="res://scenes/levels/general/grapple_powerup.tscn" id="3_3natx"]
 [ext_resource type="Script" path="res://scenes/levels/general/Ground TileMap.gd" id="3_aahuj"]
@@ -4239,7 +4238,6 @@ size = Vector2(10, 336.5)
 size = Vector2(2515.5, 15)
 
 [node name="level_three" type="Node"]
-script = ExtResource("1_votkh")
 
 [node name="Ground" type="Node2D" parent="."]
 
@@ -4260,7 +4258,7 @@ script = null
 
 [node name="Grappable Layer" parent="Ground" instance=ExtResource("2_f35tl")]
 tile_set = SubResource("TileSet_ts044")
-layer_0/tile_data = PackedInt32Array(131078, 589824, 4, 196614, 589824, 5, 131100, 786432, 4, 196636, 786432, 5, 393236, 786432, 3, 458772, 786432, 4, 524308, 786432, 5, 393229, 589824, 3, 458765, 589824, 4, 524301, 589824, 5, 393230, 655360, 3, 393231, 655360, 3, 393232, 655360, 3, 393233, 655360, 3, 393234, 655360, 3, 393235, 720896, 3, 458771, 720896, 4)
+layer_0/tile_data = PackedInt32Array(131078, 589824, 4, 196614, 589824, 5, 131100, 786432, 4, 196636, 786432, 5, 393236, 786432, 3, 458772, 786432, 4, 524308, 786432, 5, 393229, 589824, 3, 458765, 589824, 4, 524301, 589824, 5, 393230, 655360, 3, 393231, 655360, 3, 393232, 655360, 3, 393233, 655360, 3, 393234, 655360, 3, 393235, 720896, 3, 458771, 720896, 4, 983056, 589824, 4, 1048592, 589824, 5)
 script = ExtResource("3_aahuj")
 
 [node name="Walls" type="Node2D" parent="."]
