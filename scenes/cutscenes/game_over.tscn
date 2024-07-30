@@ -48,7 +48,7 @@ region = Rect2(1500, 0, 250, 250)
 atlas = ExtResource("3_wwbjb")
 region = Rect2(1750, 0, 250, 250)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_qamj2"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_0wq7k"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -84,7 +84,7 @@ animations = [{
 atlas = ExtResource("2_0i272")
 region = Rect2(336, 96, 48, 48)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_nsp2d"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_jx72i"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -125,13 +125,13 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_wbiau")
 position = Vector2(348, 358)
 rotation = 3.14159
 scale = Vector2(2, -2)
-sprite_frames = SubResource("SpriteFrames_qamj2")
+sprite_frames = SubResource("SpriteFrames_0wq7k")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Panel/Panel"]
 position = Vector2(453, 396)
 rotation = 3.14159
 scale = Vector2(2, -2)
-sprite_frames = SubResource("SpriteFrames_nsp2d")
+sprite_frames = SubResource("SpriteFrames_jx72i")
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Panel/Panel"]
 layout_mode = 1

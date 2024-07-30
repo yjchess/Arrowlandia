@@ -1,9 +1,10 @@
-[gd_scene load_steps=34 format=3 uid="uid://c4bw61hqbri1i"]
+[gd_scene load_steps=39 format=3 uid="uid://c4bw61hqbri1i"]
 
 [ext_resource type="Texture2D" uid="uid://dvbrq8lfwe16j" path="res://assets/arrows/Ranger- Base.png" id="1_8n02y"]
 [ext_resource type="Script" path="res://scenes/cutscenes/introduction.gd" id="1_c3sln"]
 [ext_resource type="Texture2D" uid="uid://cds15l0s8d4ms" path="res://assets/misc/Idle_Wizard.png" id="2_plvj3"]
 [ext_resource type="Texture2D" uid="uid://bqfwbvjogyfh2" path="res://assets/misc/Idle_King.png" id="3_8tr84"]
+[ext_resource type="Texture2D" uid="uid://c2xo10h0bfrx7" path="res://assets/misc/Death_Princess.png" id="3_odrnc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dtgvs"]
 bg_color = Color(0, 0, 0, 1)
@@ -131,15 +132,43 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_81j3u"]
-atlas = ExtResource("1_8n02y")
-region = Rect2(336, 96, 48, 48)
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bjt8"]
+atlas = ExtResource("3_odrnc")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vf6lu"]
+atlas = ExtResource("3_odrnc")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_si8v6"]
+atlas = ExtResource("3_odrnc")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yamka"]
+atlas = ExtResource("3_odrnc")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jo0ky"]
+atlas = ExtResource("3_odrnc")
+region = Rect2(400, 0, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nsp2d"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_81j3u")
+"texture": SubResource("AtlasTexture_3bjt8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vf6lu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_si8v6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yamka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jo0ky")
 }],
 "loop": false,
 "name": &"default",
@@ -263,6 +292,7 @@ wait_time = 10.7
 one_shot = true
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Panel/Panel"]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
