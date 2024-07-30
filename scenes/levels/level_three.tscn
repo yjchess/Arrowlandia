@@ -1,5 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://cnex2qmodssxv"]
+[gd_scene load_steps=22 format=3 uid="uid://cnex2qmodssxv"]
 
+[ext_resource type="Script" path="res://scenes/levels/level_three.gd" id="1_tcmc8"]
 [ext_resource type="PackedScene" uid="uid://bwlv0bhy5jt4u" path="res://scenes/levels/general/Ground TileMap.tscn" id="2_f35tl"]
 [ext_resource type="PackedScene" uid="uid://bny83mrdiafse" path="res://scenes/levels/general/grapple_powerup.tscn" id="3_3natx"]
 [ext_resource type="Script" path="res://scenes/levels/general/Ground TileMap.gd" id="3_aahuj"]
@@ -4238,6 +4239,7 @@ size = Vector2(10, 336.5)
 size = Vector2(2515.5, 15)
 
 [node name="level_three" type="Node"]
+script = ExtResource("1_tcmc8")
 
 [node name="Ground" type="Node2D" parent="."]
 

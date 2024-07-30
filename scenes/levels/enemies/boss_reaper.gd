@@ -58,6 +58,7 @@ func enable_detection_area():  $Area2D/CollisionShape2D.set_deferred("disabled",
 
 func _on_attack_area_body_entered(body):
 	if body.name =="Player":
+		Player._on_player_damage()
 		print("Player Hit!")
 
 func _on_arrow_collision():

@@ -1,0 +1,281 @@
+[gd_scene load_steps=24 format=3 uid="uid://n7thgrshpyfk"]
+
+[ext_resource type="Texture2D" uid="uid://dvbrq8lfwe16j" path="res://assets/arrows/Ranger- Base.png" id="1_8708m"]
+[ext_resource type="Texture2D" uid="uid://dbkim3hr4lgml" path="res://assets/EVil Wizard 2/Sprites/Idle.png" id="2_20y0w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dtgvs"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wbiau"]
+bg_color = Color(0.643137, 0.317647, 0.0156863, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.411765, 0.196078, 0.00392157, 1)
+border_blend = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tmc27"]
+atlas = ExtResource("1_8708m")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slw4t"]
+atlas = ExtResource("1_8708m")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n750n"]
+atlas = ExtResource("1_8708m")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sct7c"]
+atlas = ExtResource("1_8708m")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhy1c"]
+atlas = ExtResource("1_8708m")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akvlh"]
+atlas = ExtResource("1_8708m")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qamj2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tmc27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slw4t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n750n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sct7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fhy1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_akvlh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kua7"]
+atlas = ExtResource("2_20y0w")
+region = Rect2(0, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hvhy"]
+atlas = ExtResource("2_20y0w")
+region = Rect2(250, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7twl"]
+atlas = ExtResource("2_20y0w")
+region = Rect2(500, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhkeh"]
+atlas = ExtResource("2_20y0w")
+region = Rect2(750, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6jk6"]
+atlas = ExtResource("2_20y0w")
+region = Rect2(1000, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pnkq"]
+atlas = ExtResource("2_20y0w")
+region = Rect2(1250, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abfib"]
+atlas = ExtResource("2_20y0w")
+region = Rect2(1500, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_thxbt"]
+atlas = ExtResource("2_20y0w")
+region = Rect2(1750, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvb1x"]
+atlas = ExtResource("2_20y0w")
+region = Rect2(0, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1wq4"]
+atlas = ExtResource("2_20y0w")
+region = Rect2(250, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6thc5"]
+atlas = ExtResource("2_20y0w")
+region = Rect2(500, 0, 250, 250)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nsp2d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8kua7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4hvhy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d7twl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dhkeh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6jk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pnkq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abfib")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thxbt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvb1x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1wq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6thc5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Game Over" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dtgvs")
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -393.0
+offset_right = 392.0
+offset_bottom = 640.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wbiau")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panel/Panel"]
+position = Vector2(262, 58)
+rotation = 3.14159
+scale = Vector2(-2, -2)
+sprite_frames = SubResource("SpriteFrames_qamj2")
+autoplay = "default"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Panel/Panel"]
+position = Vector2(532, 68)
+rotation = 3.14159
+scale = Vector2(0.9, -0.9)
+sprite_frames = SubResource("SpriteFrames_nsp2d")
+autoplay = "default"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Panel/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -377.5
+offset_top = 21.0006
+offset_right = 374.5
+offset_bottom = 205.001
+grow_horizontal = 2
+theme_override_colors/default_color = Color(0, 0.317647, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "
+[center][b][font_size=35]CREDITS:[/font_size][/b][/center]"
+fit_content = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -210.5
+offset_top = 86.0
+offset_right = 377.5
+offset_bottom = 452.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]
+[table=2]
+[cell border=#000 bg=silver] NAME [/cell]  [cell border=#000 bg=darkgray] CONTRIBUTION [/cell]
+
+[cell border=#000 bg=LightSlateGray] Yang-Jian Zhou [/cell] [cell border=#000 bg=SlateGray] Programmer + Designer [/cell]
+
+[cell border=#000 bg=LightSlateGray] Chr0ma Dave [/cell] [cell border=#000 bg=SlateGray] Fantasy Ranger [/cell]
+
+[cell border=#000 bg=LightSlateGray] Jesse M [/cell] [cell border=#000 bg=SlateGray] Skeleton Sprite Pack [/cell]
+
+[cell border=#000 bg=LightSlateGray] Luiz Melo [/cell] [cell border=#000 bg=SlateGray] Monsters Creatures Fantasy, Evil Wizard 2, Huntress 2, Medieval King Pack 2 [/cell]
+
+[cell border=#000 bg=LightSlateGray] Anokolisa [/cell] [cell border=#000 bg=SlateGray] basic 140 tiles grassland and mines [/cell]
+
+[cell border=#000 bg=LightSlateGray] Ankousse26 [/cell] [cell border=#000 bg=SlateGray] free flag with animation [/cell]
+
+[cell border=#000 bg=LightSlateGray] darkpixel-kronovi [/cell] [cell border=#000 bg=SlateGray] undead-executioner [/cell]
+
+[cell border=#000 bg=LightSlateGray] pop-shop-packs [/cell] [cell border=#000 bg=SlateGray] coins-2d-pixel-asset-pack [/cell]
+
+[cell border=#000 bg=LightSlateGray] Robert Brooks [/cell] [cell border=#000 bg=SlateGray] Boulder [/cell]
+
+[/table]
+[/center]"
+fit_content = true
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Panel/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -317.5
+offset_top = 77.0
+offset_right = 215.5
+offset_bottom = 460.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "[font size=280]{[/font]"
+fit_content = true
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="Panel/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -393.5
+offset_top = 380.0
+offset_right = -233.5
+offset_bottom = 485.0
+grow_horizontal = 2
+rotation = -1.57282
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[center][font size=30][color=fuchsia][b]Itch.io art assets[/b][/color][/font]  [/center]"
+fit_content = true

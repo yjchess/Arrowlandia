@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var arrow:PackedScene
 @export var grapple_arrow:PackedScene
+var health = 3
 var grapple_unlocked = false
 const SPEED = 70.0
 const JUMP_VELOCITY = -400.0
@@ -58,7 +59,10 @@ func _physics_process(delta):
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		if collision.get_collider().is_in_group("enemy"):
-			print(collision.get_collider().name)
+			_on_player_damage()
+			print("Damaged")
+		elif collision.get_collider().is_in_group("traps"):
+			_on_player_one_shot()
 
 func _process(delta):
 	if Input.is_action_pressed("left"):
@@ -67,3 +71,12 @@ func _process(delta):
 	if Input.is_action_pressed("right"):
 		$AnimatedSprite2D.flip_h = false
 		$AnimatedSprite2D.position.x = 0
+	
+	if health == 0:
+		get_tree().change_scene_to_file("res://scenes/cutscenes/game_over.tscn")
+
+func _on_player_damage():
+	health -= 1
+	
+func _on_player_one_shot():
+	health = 0

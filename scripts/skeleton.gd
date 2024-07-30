@@ -102,7 +102,7 @@ func _on_detect_player_timer_timeout():
 	if bodies_inside.has("Player") == true:
 		print("Player inside")
 		emit_signal("PlayerHit")
-	
+		$"../../Player"._on_player_damage()
 
 func _on_area_2d_body_exited(body):
 	bodies_inside.erase(body.name)

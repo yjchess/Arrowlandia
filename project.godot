@@ -14,6 +14,10 @@ config/name="Arrowland"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/resizable=false
+
 [editor]
 
 version_control/plugin_name="GitPlugin"
