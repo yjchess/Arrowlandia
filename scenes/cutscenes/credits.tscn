@@ -1,6 +1,7 @@
-[gd_scene load_steps=24 format=3 uid="uid://n7thgrshpyfk"]
+[gd_scene load_steps=25 format=3 uid="uid://n7thgrshpyfk"]
 
 [ext_resource type="Texture2D" uid="uid://dvbrq8lfwe16j" path="res://assets/arrows/Ranger- Base.png" id="1_8708m"]
+[ext_resource type="Script" path="res://scenes/cutscenes/credits.gd" id="1_xrxpd"]
 [ext_resource type="Texture2D" uid="uid://dbkim3hr4lgml" path="res://assets/EVil Wizard 2/Sprites/Idle.png" id="2_20y0w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dtgvs"]
@@ -150,13 +151,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Game Over" type="Control"]
+[node name="Credits" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_xrxpd")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
@@ -279,3 +281,21 @@ theme_override_font_sizes/bold_font_size = 30
 bbcode_enabled = true
 text = "[center][font size=30][color=fuchsia][b]Itch.io art assets[/b][/color][/font]  [/center]"
 fit_content = true
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -181.0
+offset_top = -118.0
+offset_right = 181.0
+offset_bottom = -41.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "Restart Game?"
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
